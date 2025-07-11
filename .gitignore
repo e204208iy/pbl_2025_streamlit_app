@@ -1,0 +1,4 @@
+.venv
+.env
+mysql/
+archive_scripts

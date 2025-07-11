@@ -1,0 +1,15 @@
+services:
+  mysql:
+    build:
+      context: ./mysql
+      dockerfile: dockerfile
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
+      - ./mysql/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=test_db  # 作成するデータベース名
+      - MYSQL_USER=test         # 作成するユーザー名
+      - MYSQL_PASSWORD=test     # 作成したユーザーのパスワード
+    ports:
+      - "3306:3306"
