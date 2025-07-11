@@ -5,10 +5,16 @@
 - エントリーポイントはmain_app.py
 - SQL生成はmcp-mysql-server-master/main.py
 
+### リポジトリをクローン
+```bash
+git clone https://github.com/e204208iy/pbl_2025_streamlit_app.git
+```
+
 ### MySQLのコンテナを立てる
 - docker環境がある人のみ
 - streamlitはローカルで開発。dockerを使いたい人はcomposeファイルに追記。
 ```bash
+cd pbl_2025_streamlit_app
 docker compose up -d
 ```
 
